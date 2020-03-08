@@ -1,0 +1,126 @@
+/* landing page images
+
+https://oxidian.ch/wp-content/uploads/2019/02/heroimg.png 
+
+https://trueweblogic.com/images/home-webdesign.png
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Asap:400,700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.lightBlue_background {
+	background-color: #f2f6fc;
+}
+
+#nav_bar_hidden {
+	height: 190px;
+	padding-top: 25px;
+	text-align: center;
+}
+
+#nav_bar_showing {
+	display: none;
+}
+
+#company_logo {
+	height: 225px;
+	width: 250px;
+	background-image: url("https://www.teddyguilfoyle.ie/wp-content/uploads/2017/06/web-logo-footer-logo-2.png");
+	background-position: -106px 0;
+	zoom: 50%;
+	margin: 0 auto;
+}
+
+#logo_name {
+	font-family: 'Bebas Neue', cursive;
+	font-size: 56px;
+}
+
+#container {
+	display: grid;
+	grid-template-rows: repeat(5, auto);
+	width: 100%;
+	height: auto;
+	padding-top: 25px;
+}
+
+#container p {
+	text-align: center;
+	font-family: 'Asap', sans-serif;
+	font-size: 22px;
+}
+
+.landing_info {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 20px;
+}
+
+.main_image {
+	width: 100%;
+}
+
+.main_image_caption {
+	color: #c8d2e2;
+	font-size: 12px;
+}
+
+#contact_info {
+	width: 55%;
+	justify-self: center;
+	padding-top: 30px;
+}
+
+#contact_info h2 {
+	font-size: 32px;
+	margin-bottom: 30px;
+	color: #4682e2;
+}
+
+#contact_info label {
+	font-size: 14px;
+	color: #4682e2;
+}
+
+input[type=text],
+input[type=tel],
+#subject {
+	display: block;
+	width: 100%;
+	font-size: 22px;
+	color: #00ad9f;
+	margin-top: 15px;
+	border: none;
+	background-color: inherit;
+	border-bottom: 3px solid #f6c173;
+	outline: none;
+}
+
+::placeholder {
+	color: #ced2d6;
+	opacity: 1;
+}
+
+input[type=button] {
+	display: block;
+	width: 150px;
+	height: 50px;
+	margin-top: 50px;
+	background-color: inherit;
+	border-radius: 25px;
+	border: 3px solid #f4b251;
+	font-size: 18px;
+	color: #4682e2;
+	cursor: pointer;
+	outline: none;
+}
