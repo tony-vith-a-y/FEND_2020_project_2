@@ -48,22 +48,27 @@ ul {
 
 #container {
 	display: grid;
-	grid-template-rows: repeat(5, auto);
+	grid-template-rows: repeat(4, auto);
 	width: 100%;
 	height: auto;
-	padding-top: 25px;
 }
 
-#container p {
+.slogan {
 	text-align: center;
 	font-family: 'Asap', sans-serif;
 	font-size: 22px;
+	padding-bottom: 25px;
+}
+
+#landing_area {
+	padding: 20px;
+	padding-top: 0;
+	font-family: 'Asap', sans-serif;
 }
 
 .landing_info {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	padding: 20px;
 }
 
 .main_image {
@@ -84,12 +89,12 @@ ul {
 #contact_info h2 {
 	font-size: 32px;
 	margin-bottom: 30px;
-	color: #4682e2;
+	color: #4072d5;
 }
 
 #contact_info label {
 	font-size: 14px;
-	color: #4682e2;
+	color: #4072d5;
 }
 
 input[type=text],
@@ -98,11 +103,11 @@ input[type=tel],
 	display: block;
 	width: 100%;
 	font-size: 22px;
-	color: #00ad9f;
+	color: #fe7d13;
 	margin-top: 15px;
 	border: none;
 	background-color: inherit;
-	border-bottom: 3px solid #f6c173;
+	border-bottom: 3px solid #fe64a7;
 	outline: none;
 }
 
@@ -118,9 +123,12 @@ input[type=button] {
 	margin-top: 50px;
 	background-color: inherit;
 	border-radius: 25px;
-	border: 3px solid #f4b251;
 	font-size: 18px;
-	color: #4682e2;
+	color: #87264f;
 	cursor: pointer;
 	outline: none;
+	border-bottom: 3px solid #00e26f;
+	border-top: 3px solid #fede00;
+	border-right: 3px solid #eb0513;
+	border-left: 3px solid #41c4dd;
 }
