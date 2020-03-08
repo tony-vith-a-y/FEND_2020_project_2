@@ -14,12 +14,12 @@ https://trueweblogic.com/images/home-webdesign.png
 	margin: 0;
 }
 
-ul {
-	list-style-type: none;
+body {
+	background-color: #f2f6fc;
 }
 
-.lightBlue_background {
-	background-color: #f2f6fc;
+ul {
+	list-style-type: none;
 }
 
 #nav_bar_hidden {
@@ -53,17 +53,19 @@ ul {
 	height: auto;
 }
 
-.slogan {
-	text-align: center;
-	font-family: 'Asap', sans-serif;
-	font-size: 22px;
-	padding-bottom: 25px;
-}
-
 #landing_area {
 	padding: 20px;
 	padding-top: 0;
 	font-family: 'Asap', sans-serif;
+}
+
+.slogan {
+	text-align: center;
+	font-family: 'Asap', sans-serif;
+	font-size: 28px;
+	padding-bottom: 60px;
+	padding-top: 30px;
+	color: #ec6467;
 }
 
 .landing_info {
