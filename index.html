@@ -4,94 +4,124 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Project 2</title>
+	<title>Web Solutions</title>
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/services.css">
 </head>
 
 <body>
-	<nav>
-		<ul id="nav_bar_hidden">
-			<li id="company_logo">
-			</li>
-			<li id="logo_name">Web Solution</li>
-		</ul>
-		<ul id="nav_bar_showing">
-			<li></li>
-		</ul>
-	</nav>
-	<main id="container">
-		<header id="landing_area">
-			<p class="slogan">Online presence is cruitial for a business so lets make it the best it can be.
-			</p>
-			<div class="landing_info">
-				<figure>
-					<img class="main_image" src="https://trueweblogic.com/images/home-webdesign.png" alt="LandingPage_Image">
-					<figcaption class="main_image_caption">Image Source: www.oxifian.ch</figcaption>
-				</figure>
-				<form id="contact_info">
-					<h2>Contact Us</h2>
-					<input type="text" id="Fname" name="firstName" placeholder="Jane">
-					<label for="Fname">First Name</label>
-					<input type="text" id="Lname" name="lastName" placeholder="Doe">
-					<label for="Lname">Last Name</label>
-					<input type="text" id="companyName" name="lastName" placeholder="Company Name">
-					<label for="companyName">Company</label>
-					<input type="text" id="Email" name="e-mail"
-						pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-						placeholder="example@gmail.com" required>
-					<label for="Email">E-mail</label>
-					<input type="tel" id="phone" name="phone" placeholder="123-435-6784" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-						required>
-					<label for="phone">Phone number</label>
-					<input type="button" value="Submit">
-				</form>
+	<main class="outer_container">
+		<section id="contact_page" class="section_details">
+			<div class="inner_container">
+				<ul>
+					<li id="company_logo"></li>
+					<li id="company_name">Web Solutions</li>
+					<li id="company_slogan">Online presence is cruitial for a business so lets make yours the best it can be</li>
+					<li id="contact_us">
+						<figure class="contact_us_image">
+							<img src="https://trueweblogic.com/images/home-webdesign.png" alt="LandingPage_Image">
+							<figcaption class="image_caption">Image Source: see img src</figcaption>
+						</figure>
+						<form id="contact_us_form">
+							<h2>Contact Us</h2>
+							<input type="text" id="Fname" name="firstName" placeholder="Jane">
+							<label for="Fname">First Name</label>
+							<input type="text" id="Lname" name="lastName" placeholder="Doe">
+							<label for="Lname">Last Name</label>
+							<input type="text" id="companyName" name="lastName" placeholder="Company Name">
+							<label for="companyName">Company</label>
+							<input type="text" id="Email" name="e-mail"
+								pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+								placeholder="example@gmail.com" required>
+							<label for="Email">E-mail</label>
+							<input type="tel" id="phone" name="phone" placeholder="123-435-6784" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+								required>
+							<label for="phone">Phone number</label>
+							<input type="button" value="Submit">
+						</form>
+					</li>
+				</ul>
 			</div>
-		</header>
-		<section id="services">
-			<ul class="cards text_color_red">
-				<li><img class="card_images" src="https://moversdev.com/wp-content/uploads/2019/04/web_design.png"></li>
-				<li class="card_title">Design</li>
-				<li class="card_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et
-					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat</li>
-			</ul>
-			<ul class="cards text_color_yellow">
-				<li><img class="card_images"
-						src="https://lh3.googleusercontent.com/proxy/kz5GnGWeAgvs6G6OJKJlg6N6WnANorVpya6MkkEKaIfi1PN1CIzsgzFmdXAJtEQ5qnd9ToUEoMl4ebMnFN_tgMBKmfEUjVetjA5LThPwwgh1diQC6CQmj4kOJ_i3QNE">
-				</li>
-				<li class="card_title">Develop</li>
-				<li class="card_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et
-					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat</li>
-			</ul>
-			<ul class="cards text_color_green">
-				<li><img class="card_images" src="https://www.bnecreative.com/wp-content/uploads/2019/07/illus-webdesign-2.png">
-				</li>
-				<li class="card_title">Deploy</li>
-				<li class="card_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et
-					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat</li>
-			</ul>
-			<ul class="cards text_color_blue">
-				<li><img class="card_images"
-						src="https://nativeattention.com/wp-content/uploads/2019/09/digital-marketing-vector-min-1024x659.png">
-				</li>
-				<li class="card_title">Maintain</li>
-				<li class="card_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et
-					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat</li>
-			</ul>
 		</section>
-		<section>
-
+		<section id="our_services" class="section_details">
+			<div class="inner_container">
+				<div class="services_card_container">
+					<ul class="services_cards text_color_red">
+						<li>
+							<figure>
+								<img class="services_cards_image" src="https://moversdev.com/wp-content/uploads/2019/04/web_design.png">
+								<figcaption class="image_caption">Image Source: see img src</figcaption>
+							</figure>
+						</li>
+						<li class="services_cards_title">Design</li>
+						<li class="services_cards_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod
+							tempor
+							incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+							ea
+							commodo consequat</li>
+					</ul>
+					<ul class="services_cards text_color_yellow">
+						<li>
+							<figure>
+								<img class="services_cards_image"
+									src="https://www.codetribesolutions.com/wp-content/uploads/2019/06/web.png">
+								<figcaption class="image_caption">Image Source: see img src</figcaption>
+							</figure>
+						</li>
+						<li class="services_cards_title">Develop</li>
+						<li class="services_cards_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod
+							tempor
+							incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+							ea
+							commodo consequat</li>
+					</ul>
+					<ul class="services_cards text_color_green">
+						<li>
+							<figure>
+								<img class="services_cards_image"
+									src="https://www.bnecreative.com/wp-content/uploads/2019/07/illus-webdesign-2.png">
+								<figcaption class="image_caption">Image Source: see img src</figcaption>
+							</figure>
+						</li>
+						<li class="services_cards_title">Deploy</li>
+						<li class="services_cards_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod
+							tempor
+							incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+							ea
+							commodo consequat</li>
+					</ul>
+					<ul class="services_cards text_color_blue">
+						<li>
+							<figure>
+								<img class="services_cards_image"
+									src="https://nativeattention.com/wp-content/uploads/2019/09/digital-marketing-vector-min-1024x659.png">
+								<figcaption class="image_caption">Image Source: see img src</figcaption>
+							</figure>
+						</li>
+						<li class="services_cards_title">Maintain</li>
+						<li class="services_cards_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod
+							tempor
+							incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+							ea
+							commodo consequat</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section id="our_prices" class="section_details">
+			<div class="inner_container"></div>
+		</section>
+		<section id="the_reviews" class="section_details">
+			<div class="inner_container"></div>
 		</section>
 	</main>
-	<script></script>
 </body>
 
 </html>

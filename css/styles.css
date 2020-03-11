@@ -1,100 +1,111 @@
-/* landing page images
-
-https://oxidian.ch/wp-content/uploads/2019/02/heroimg.png 
-
-https://trueweblogic.com/images/home-webdesign.png
-
-*/
-
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Asap:400,700&display=swap');
 
 * {
 	padding: 0;
 	margin: 0;
-}
-
-body {
-	background-color: #f2f6fc;
+	font-family: 'Asap', sans-serif;
 }
 
 ul {
 	list-style-type: none;
 }
 
-#nav_bar_hidden {
-	height: 190px;
-	padding-top: 25px;
-	text-align: center;
+.outer_container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 
-#nav_bar_showing {
-	display: none;
+.section_details {
+	height: auto;
+	display: flex;
+	justify-content: center;
+	padding: 80px 20px;
 }
 
-#company_logo {
-	height: 225px;
-	width: 250px;
-	background-image: url("https://www.teddyguilfoyle.ie/wp-content/uploads/2017/06/web-logo-footer-logo-2.png");
-	background-position: -106px 0;
-	zoom: 50%;
-	margin: 0 auto;
-}
-
-#logo_name {
-	font-family: 'Bebas Neue', cursive;
-	font-size: 56px;
-}
-
-#container {
-	display: grid;
-	grid-template-rows: repeat(4, auto);
+.inner_container {
 	width: 100%;
 	height: auto;
+	max-width: 1240px;
+	background-color: inherit;
 }
 
-#landing_area {
-	padding: 20px;
-	padding-top: 0;
-	font-family: 'Asap', sans-serif;
+#contact_page {
+	background-color: #f2f6fc;
 }
 
-.slogan {
-	text-align: center;
-	font-family: 'Asap', sans-serif;
-	font-size: 28px;
-	padding-bottom: 60px;
-	padding-top: 30px;
-	color: #ec6467;
+#our_services {
+	background-color: #fcf2f6;
 }
 
-.landing_info {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+#our_prices {
+	background-color: #f6fcf2;
 }
 
-.main_image {
-	width: 100%;
+#the_reviews {
+	background-color: #fcf8f2;
 }
 
-.main_image_caption {
+.image_caption {
 	color: #c8d2e2;
 	font-size: 12px;
 }
 
-#contact_info {
-	width: 55%;
-	justify-self: center;
-	padding-top: 30px;
+/* 
+	---------------------------------
+						Contact page
+	---------------------------------
+*/
+
+#company_logo {
+	height: 210px;
+	width: 245px;
+	background-image: url("https://www.teddyguilfoyle.ie/wp-content/uploads/2017/06/web-logo-footer-logo-2.png");
+	background-position: -110px 0;
+	margin: 0 auto;
+	margin-top: 25px;
+	zoom: 65%;
 }
 
-#contact_info h2 {
+#company_name {
+	font-family: 'Bebas Neue', cursive;
+	font-size: 56px;
+	width: 270px;
+	margin: 0 auto;
+}
+
+#company_slogan {
+	font-size: 28px;
+	padding-top: 15px;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+#contact_us {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.contact_us_image {
+	zoom: 75%;
+	justify-self: end;
+}
+
+#contact_us_form {
+	width: 55%;
+	justify-self: center;
+	padding-top: 15px;
+}
+
+#contact_us_form h2 {
 	font-size: 32px;
 	margin-bottom: 30px;
 	color: #4072d5;
 }
 
-#contact_info label {
+#contact_us_form label {
 	font-size: 14px;
 	color: #4072d5;
 }
@@ -133,4 +144,73 @@ input[type=button] {
 	border-top: 3px solid #fede00;
 	border-right: 3px solid #eb0513;
 	border-left: 3px solid #41c4dd;
+}
+
+/* 
+	---------------------------------
+						Services Page
+	---------------------------------
+*/
+
+.services_card_container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.services_cards {
+	width: 20%;
+	height: 500px;
+	border-left: 2px solid #4498d250;
+	padding: 0 20px;
+	position: relative;
+}
+
+.services_cards:first-child {
+	border-left: 0;
+}
+
+.services_cards:hover {
+	background-color: #edf3fd;
+}
+
+.services_cards_image {
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.services_cards_title {
+	position: absolute;
+	top: 250px;
+	font-size: 22px;
+	padding-left: 30%;
+	color: inherit;
+	font-weight: 700;
+}
+
+.text_color_red {
+	color: #ff757a;
+}
+
+.text_color_yellow {
+	color: #fdbd3c;
+}
+
+.text_color_green {
+	color: #3bcec5;
+}
+
+.text_color_blue {
+	color: #00bbf9;
+}
+
+.services_cards_description {
+	position: absolute;
+	top: 300px;
+	font-size: 16px;
+	color: inherit;
+	text-align: justify;
+	padding-right: inherit;
 }
