@@ -86,17 +86,16 @@ ul {
 	width: 55%;
 	justify-self: center;
 	padding-top: 15px;
+	color: #4072d5;
 }
 
 #contact_us_form h2 {
 	font-size: 32px;
 	margin-bottom: 30px;
-	color: #4072d5;
 }
 
 #contact_us_form label {
 	font-size: 14px;
-	color: #4072d5;
 }
 
 input[type=text],
@@ -105,7 +104,7 @@ input[type=tel],
 	display: block;
 	width: 100%;
 	font-size: 22px;
-	color: #fe7d13;
+	color: #fe64a7;
 	margin-top: 15px;
 	border: none;
 	background-color: inherit;
@@ -232,37 +231,49 @@ input[type=button] {
 	display: grid;
 	grid-template-rows: repeat(3, 1fr);
 	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 125px;
+	grid-gap: 250px;
 }
 
 .reviews_card {
 	border: 10px solid white;
-	width: 85%;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	width: 96%;
 	position: relative;
 	background: #f2f6fc;
 }
 
 .quotes {
 	height: 145px;
-	width: 180px;
+	width: 170px;
 	background-image: url("https://cdn2.iconfinder.com/data/icons/flat-icons-web/40/Quote_Serif-512.png");
 	background-color: #f2f6fc;
 	position: absolute;
-	zoom: 65%;
+	zoom: 33%;
+	padding: 20px;
 }
 
 .open_quote {
-	background-position: -78px -100px;
-	top: -78px;
-	left: -102px;
+	background-position: -68px -80px;
+	top: -94px;
+	left: -113px;
 }
 
 .close_quote {
-	background-position: -254px -267px;
-	bottom: -67px;
-	right: -104px;
+	background-position: -234px -247px;
+	bottom: -84px;
+	right: -114px;
 }
 
 .review_text {
-	padding: 80px;
+	padding: 50px;
+}
+
+.review_text h5 {
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+
+.review_text p {
+	line-height: 1.5;
 }
