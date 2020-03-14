@@ -153,7 +153,7 @@ input[type=button] {
 .services_cards {
 	width: 20%;
 	border-left: 2px solid #4498d250;
-	padding: 20px;
+	padding: 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -198,7 +198,7 @@ input[type=button] {
 }
 
 .decrease_margin_top {
-	margin-top: 15px;
+	margin-top: -35px;
 }
 
 .services_cards_description {
@@ -229,18 +229,20 @@ input[type=button] {
 
 .reviews_container {
 	display: grid;
-	grid-template-rows: repeat(3, 1fr);
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 250px;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 100px;
+	width: 85%;
 }
 
 .reviews_card {
 	border: 10px solid white;
 	border-top-right-radius: 15px;
 	border-bottom-left-radius: 15px;
-	width: 96%;
+	width: 95%;
 	position: relative;
 	background: #f2f6fc;
+	box-shadow: 7px 6px 12px -8px rgba(0, 0, 0, 0.75);
 }
 
 .quotes {
@@ -249,7 +251,7 @@ input[type=button] {
 	background-image: url("https://cdn2.iconfinder.com/data/icons/flat-icons-web/40/Quote_Serif-512.png");
 	background-color: #f2f6fc;
 	position: absolute;
-	zoom: 33%;
+	zoom: 28%;
 	padding: 20px;
 }
 
@@ -266,14 +268,15 @@ input[type=button] {
 }
 
 .review_text {
-	padding: 50px;
+	padding: 30px;
 }
 
 .review_text h5 {
-	margin-bottom: 20px;
 	font-weight: 400;
+	line-height: 1.4;
 }
 
 .review_text p {
+	margin-top: 20px;
 	line-height: 1.5;
 }
