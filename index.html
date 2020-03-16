@@ -11,36 +11,34 @@
 <body>
 	<main class="outer_container">
 		<section id="contact_section" class="section_details">
-			<div class="inner_container">
-				<ul>
-					<li id="company_logo"></li>
-					<li id="company_name">Web Solutions</li>
-					<li id="company_slogan">Online presence is cruitial for a business so lets make yours the best it can be</li>
-					<li id="contact_us">
-						<figure class="contact_us_image">
-							<img src="https://trueweblogic.com/images/home-webdesign.png" alt="LandingPage_Image">
-							<figcaption class="image_caption">Image Source: see img src</figcaption>
-						</figure>
-						<form id="contact_us_form">
-							<h2>Contact Us</h2>
-							<input type="text" id="Fname" name="firstName" placeholder="Jane">
-							<label for="Fname">First Name</label>
-							<input type="text" id="Lname" name="lastName" placeholder="Doe">
-							<label for="Lname">Last Name</label>
-							<input type="text" id="companyName" name="lastName" placeholder="Company Name">
-							<label for="companyName">Company</label>
-							<input type="text" id="Email" name="e-mail"
-								pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-								placeholder="example@gmail.com" required>
-							<label for="Email">E-mail</label>
-							<input type="tel" id="phone" name="phone" placeholder="123-435-6784" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-								required>
-							<label for="phone">Phone number</label>
-							<input type="button" value="Submit">
-						</form>
-					</li>
-				</ul>
-			</div>
+			<ul class="inner_container">
+				<li id="company_logo"></li>
+				<li id="company_name">Web Solutions</li>
+				<li id="company_slogan">Online presence is cruitial for a business so lets make yours the best it can be</li>
+				<li id="contact_us">
+					<figure class="contact_us_image">
+						<img src="https://trueweblogic.com/images/home-webdesign.png" alt="LandingPage_Image">
+						<figcaption class="image_caption">Image Source: see img src</figcaption>
+					</figure>
+					<form id="contact_us_form">
+						<h2>Contact Us</h2>
+						<input type="text" id="Fname" name="firstName" placeholder="Jane">
+						<label for="Fname">First Name</label>
+						<input type="text" id="Lname" name="lastName" placeholder="Doe">
+						<label for="Lname">Last Name</label>
+						<input type="text" id="companyName" name="lastName" placeholder="Company Name">
+						<label for="companyName">Company</label>
+						<input type="text" id="Email" name="e-mail"
+							pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+							placeholder="example@gmail.com" required>
+						<label for="Email">E-mail</label>
+						<input type="tel" id="phone" name="phone" placeholder="123-435-6784" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+							required>
+						<label for="phone">Phone number</label>
+						<input type="button" value="Submit">
+					</form>
+				</li>
+			</ul>
 		</section>
 		<section id="our_services" class="section_details">
 			<div class="inner_container services_container">
@@ -114,58 +112,54 @@
 			</div>
 		</section>
 		<section id="our_prices" class="section_details">
-			<div class="inner_container">
-				<section id="our_prices" class="section_details">
-					<div class="inner_container price_cards">
+			<div class="inner_container price_cards">
+				<ul>
+					<li>
+						<h2>Tier 1</h2>
+					</li>
+					<li>
 						<ul>
-							<li>
-								<h2>Tier 1</h2>
-							</li>
-							<li>
-								<ul>
-									<li class="price_product text_color_red">Deisgn</li>
-								</ul>
-							</li>
-							<li class="card_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-								tempor incididunt ut labore et
-								dolore magna aliqua. Aliquam purus sit amet luctus venenatis lectus.</li>
-							<li class="price_icon">$</li>
+							<li class="price_product text_color_red">Deisgn</li>
 						</ul>
+					</li>
+					<li class="card_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+						tempor incididunt ut labore et
+						dolore magna aliqua. Aliquam purus sit amet luctus venenatis lectus.</li>
+					<li class="price_icon">$</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>Tier 2</h2>
+					</li>
+					<li>
 						<ul>
-							<li>
-								<h2>Tier 2</h2>
-							</li>
-							<li>
-								<ul>
-									<li class="price_product text_color_red">Deisgn</li>
-									<li class="price_product text_color_yellow">Develop</li>
-									<li class="price_product text_color_green">Deploy</li>
-								</ul>
-							</li>
-							<li class="card_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-								tempor incididunt ut labore et
-								dolore magna aliqua. Aliquam purus sit amet luctus venenatis lectus.</li>
-							<li class="price_icon">$$$</li>
+							<li class="price_product text_color_red">Deisgn</li>
+							<li class="price_product text_color_yellow">Develop</li>
+							<li class="price_product text_color_green">Deploy</li>
 						</ul>
+					</li>
+					<li class="card_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+						tempor incididunt ut labore et
+						dolore magna aliqua. Aliquam purus sit amet luctus venenatis lectus.</li>
+					<li class="price_icon">$$$</li>
+				</ul>
+				<ul>
+					<li>
+						<h2>Tier 3</h2>
+					</li>
+					<li>
 						<ul>
-							<li>
-								<h2>Tier 3</h2>
-							</li>
-							<li>
-								<ul>
-									<li class="price_product text_color_red">Deisgn</li>
-									<li class="price_product text_color_yellow">Develop</li>
-									<li class="price_product text_color_green">Deploy</li>
-									<li class="price_product text_color_blue">Maintain</li>
-								</ul>
-							</li>
-							<li class="card_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-								tempor incididunt ut labore et
-								dolore magna aliqua. Aliquam purus sit amet luctus venenatis lectus.</li>
-							<li class="price_icon">$$$$</li>
+							<li class="price_product text_color_red">Deisgn</li>
+							<li class="price_product text_color_yellow">Develop</li>
+							<li class="price_product text_color_green">Deploy</li>
+							<li class="price_product text_color_blue">Maintain</li>
 						</ul>
-					</div>
-				</section>
+					</li>
+					<li class="card_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+						tempor incididunt ut labore et
+						dolore magna aliqua. Aliquam purus sit amet luctus venenatis lectus.</li>
+					<li class="price_icon">$$$$</li>
+				</ul>
 			</div>
 		</section>
 		<section id="reviews" class="section_details">
