@@ -19,7 +19,7 @@ ul {
 }
 
 .section_details {
-	padding: 40px 0;
+	padding: 100px 0;
 	width: 100%;
 }
 
@@ -217,61 +217,64 @@ input[type=button] {
 
 #our_prices {
 	background-color: #fcf2f6;
-	height: 480px;
+	padding-top: 0;
 }
 
 .price_cards {
-	height: 430px;
+	height: 350px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-evenly;
 	position: relative;
 }
 
 .price_cards > ul {
-	width: 20%;
-	margin: 0 25px;
+	width: 220px;
+	height: 220px;
+	margin: 20px 25px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	align-items: center;
-	padding: 20px;
+	padding: 15px;
 	border: 2px solid #c2d6eb;
-	border-radius: 15px;
-	border-bottom: 3px solid #00e26f;
+	border-radius: 50%;
+	border-bottom: 9px solid #00e26f;
 	border-top: 3px solid #fede00;
-	border-right: 3px solid #eb0513;
-	border-left: 3px solid #41c4dd;
+	border-right: 5px solid #eb0513;
+	border-left: 5px solid #41c4dd;
 	box-shadow: 0 9px 12px -8px rgba(0, 0, 0, 0.75);
 	position: relative;
 }
 
 .price_cards h2 {
-	font-size: 46px;
-	padding-top: 20px;
+	font-size: 56px;
+	padding-top: 56px;
 }
 
 .price_product {
-	display: inline-block;
 	font-size: 12px;
+	margin-top: 3px;
 }
 
 .price_icon {
-	width: 130px;
+	width: 110px;
+	height: 60px;
 	border: 3px solid #00e26f;
-	border-radius: 15px;
+	border-radius: 50%;
 	border-top: 0;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
+	border-left: 3px solid #00e26f;
+	border-right: 3px solid #00e26f;
 	text-align: center;
-	background-color: #fcf2f6;
-	font-size: 24px;
+	font-size: 26px;
 	letter-spacing: 5px;
-	box-shadow: 0 10px 12px -8px rgba(0, 0, 0, 0.75);
-	padding-bottom: 5px;
+	box-shadow: inset 0 -10px 12px -8px rgba(0, 0, 0, 0.75), 0 70px 20px -15px rgba(0, 0, 0, 0.75);
 	position: absolute;
-	bottom: -35px;
+	top: 265px;
+	line-height: 2;
 }
 
 /* 
@@ -288,7 +291,7 @@ input[type=button] {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-evenly;
 }
 
 .reviews_card {
@@ -339,12 +342,17 @@ input[type=button] {
 }
 
 .review_profile_icon {
-	height: 50px;
-	width: 50px;
-	border-radius: 50%;
+	height: 40px;
+	width: 40px;
 	position: absolute;
-	top: 30px;
-	right: 30px;
+	top: 48px;
+	right: 15px;
+}
+
+.review_profile_image {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
 }
 
 /* ---------------------------------------------------------------- */
@@ -407,23 +415,17 @@ input[type=button] {
 	----------------------------------
 */
 
-	#our_prices {
-		height: auto;
-	}
-
 	.price_cards {
 		height: auto;
 	}
 
 	.price_cards > ul {
-		width: 60%;
-		margin: 50px 0;
+		margin: 100px 0;
 	}
 
-	/* .price_icon {
-		bottom: -78px;
-		width: 150px;
-	} */
+	.price_cards > ul:first-child {
+		margin-top: 0;
+	}
 
 	/* 
 	----------------------------------
