@@ -45,6 +45,67 @@ ul {
 
 /* 
 	----------------------------------
+						To Top Button
+	----------------------------------
+*/
+
+#scroll_to_top_btn {
+	display: none;
+	position: fixed;
+	right: 10%;
+	bottom: 90px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #ef4550;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+	border: none;
+	z-index: 99;
+}
+
+#scroll_to_top_btn:active {
+	background-color: #8d1924;
+	color: rgb(175, 174, 174);
+}
+
+/* ----- Button Animation ----- */
+.btn_enter {
+	animation-duration: 0.6s;
+	animation-fill-mode: both;
+	animation-name: btn_entering;
+}
+
+@keyframes btn_entering {
+	from {
+		opacity: 0;
+		transform: translateY(190%);
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.btn_exit {
+	animation-duration: 0.4s;
+	animation-fill-mode: both;
+	animation-name: btn_exiting;
+}
+
+@keyframes btn_exiting {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		transform: translateY(200%);
+	}
+}
+
+/* 
+	----------------------------------
 						Contact Us
 	----------------------------------
 */
@@ -361,6 +422,17 @@ input[type=button] {
 	.inner_container {
 		width: 90%;
 		margin: 0 auto;
+	}
+
+	/* 
+	----------------------------------
+						To Top Button
+	----------------------------------
+*/
+
+	#scroll_to_top_btn {
+		right: 30px;
+		bottom: 40px;
 	}
 
 	/* 
