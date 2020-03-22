@@ -82,15 +82,13 @@ function hideNavBar() {
 
 // active state to navigation
 function scrollDetails() {
+	let innerLI = innerNavContianer.querySelectorAll('li');
 	sectionList.forEach(function(a, b) {
 		console.log(`${a.id} : ${a.getBoundingClientRect().top}`);
-		if (a.getBoundingClientRect().top < 50 && a.getBoundingClientRect().top > -50) {
-			let innerLI = innerNavContianer.querySelectorAll('li');
-			if (innerLI.classList === 'active_section') {
-				innerLI.classList.remove('active_section');
-			}
-
+		if (a.getBoundingClientRect().top < 398 && a.getBoundingClientRect().top > -400) {
 			innerLI[b].setAttribute('class', 'active_section');
+		} else {
+			innerLI[b].classList.remove('active_section');
 		}
 	});
 }
