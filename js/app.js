@@ -34,6 +34,7 @@ scrollToTopButton.addEventListener('click', function() {
 window.addEventListener('scroll', function() {
 	ifPageIsScrolling();
 	showNavBar();
+	scrollDetails();
 });
 
 // show scrollToTopButton -- based on tutorial from https://www.youtube.com/watch?v=gphMli74Chk
@@ -77,4 +78,19 @@ function hideNavBar() {
 			innerNavContianer.style.display = 'none';
 		}
 	}
+}
+
+// active state to navigation
+function scrollDetails() {
+	sectionList.forEach(function(a, b) {
+		console.log(`${a.id} : ${a.getBoundingClientRect().top}`);
+		if (a.getBoundingClientRect().top < 50 && a.getBoundingClientRect().top > -50) {
+			let innerLI = innerNavContianer.querySelectorAll('li');
+			if (innerLI.classList === 'active_section') {
+				innerLI.classList.remove('active_section');
+			}
+
+			innerLI[b].setAttribute('class', 'active_section');
+		}
+	});
 }

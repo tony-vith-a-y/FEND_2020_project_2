@@ -79,7 +79,7 @@ a {
 }
 
 .nav_link_container li {
-	margin: 0 20px;
+	padding: 20px;
 }
 
 /* 
@@ -465,10 +465,6 @@ input[type=button] {
 		flex-direction: column;
 		display: none;
 		transition: display 5s;
-	}
-
-	.nav_link_container li {
-		margin: 20px 0;
 	}
 
 	.inner_container {
