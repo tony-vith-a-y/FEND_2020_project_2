@@ -56,15 +56,15 @@ function ifPageIsScrolling() {
 	}
 }
 
+// scroll into view navbar
 const innerNavContianer = document.querySelector('.nav_link_container');
-// when to show the nav bar
 function showNavBar() {
 	if (window.innerWidth > 600) {
 		innerNavContianer.style.display = 'flex';
-		if (window.pageYOffset > 142) {
+		if (window.pageYOffset > 130) {
 			navBar.style.top = 0;
 		} else {
-			navBar.style.top = '-50px';
+			navBar.style.top = '-60px';
 		}
 	}
 }

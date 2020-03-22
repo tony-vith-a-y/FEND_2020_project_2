@@ -64,18 +64,17 @@ a {
 	height: fit-content;
 	min-height: 50px;
 	position: fixed;
-	top: -50px;
+	top: -60px;
 	z-index: 98;
 	background-color: #fff;
 	text-align: right;
-	transition: top 0.3s, height 0.3s;
+	transition: top 0.3s;
 }
 
 .nav_link_container {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	padding: 20px;
 }
 
 .nav_link_container li {
@@ -151,6 +150,7 @@ a {
 
 #contact_us {
 	background-color: #f2f6fc;
+	padding-top: 50px;
 }
 
 #company_logo {
