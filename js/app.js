@@ -2,7 +2,7 @@ const sectionList = document.querySelectorAll('section');
 const scrollToTopButton = document.querySelector('#scroll_to_top_btn');
 const navBar = document.querySelector('#navbar');
 
-// Dynamically create navbar
+// Dynamically create a navbar
 (function makeNavBar() {
 	const unorderedList = document.createElement('ul');
 
@@ -16,13 +16,12 @@ const navBar = document.querySelector('#navbar');
 		createLink.innerText = removeUnderscore;
 		listItems.append(createLink);
 		unorderedList.append(listItems);
-		console.log(createLink);
 	}
 	unorderedList.setAttribute('class', 'nav_link_container');
 	navBar.append(unorderedList);
 })();
 
-// scroll button
+// what the Scroll To Top button does
 scrollToTopButton.addEventListener('click', function() {
 	window.scrollTo({
 		top: 0,
@@ -34,10 +33,11 @@ scrollToTopButton.addEventListener('click', function() {
 window.addEventListener('scroll', function() {
 	ifPageIsScrolling();
 	showNavBar();
-	scrollDetails();
+	showActive();
 });
 
-// show scrollToTopButton -- based on tutorial from https://www.youtube.com/watch?v=gphMli74Chk
+// when to show the Scroll To Top button
+// based on the tutorial from https://www.youtube.com/watch?v=gphMli74Chk
 function ifPageIsScrolling() {
 	if (window.pageYOffset > 1100) {
 		if (!scrollToTopButton.classList.contains('btn_enter')) {
@@ -56,7 +56,7 @@ function ifPageIsScrolling() {
 	}
 }
 
-// scroll into view navbar
+// on screens over 600px navbar hidden if scrollbar is at the top
 const innerNavContianer = document.querySelector('.nav_link_container');
 function showNavBar() {
 	if (window.innerWidth > 600) {
@@ -70,25 +70,34 @@ function showNavBar() {
 }
 
 // hide navbar on mobile until clicked
+navBar.addEventListener('click', hideNavBar);
 function hideNavBar() {
 	if (window.innerWidth <= 600) {
-		if (innerNavContianer.style.display === 'none') {
-			innerNavContianer.style.display = 'flex';
-		} else {
+		if (innerNavContianer.style.display === 'flex') {
 			innerNavContianer.style.display = 'none';
+		} else {
+			innerNavContianer.style.display = 'flex';
 		}
 	}
 }
 
-// active state to navigation
-function scrollDetails() {
-	let innerLI = innerNavContianer.querySelectorAll('li');
-	sectionList.forEach(function(a, b) {
-		console.log(`${a.id} : ${a.getBoundingClientRect().top}`);
-		if (a.getBoundingClientRect().top < 398 && a.getBoundingClientRect().top > -400) {
-			innerLI[b].setAttribute('class', 'active_section');
+// set active state in navbar
+// based on the tutorial by Ivan Mendieta (https://codepen.io/ivanmt07/pen/pxONrw?editors=0010)
+function showActive() {
+	let navLinks = innerNavContianer.querySelectorAll('a');
+	let scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+	for (let i = 0; i < navLinks.length; i++) {
+		let currLink = navLinks[i];
+		let hrefValue = currLink.getAttribute('href');
+		let thatSection = document.querySelector(hrefValue);
+		if (
+			thatSection.offsetTop <= scrollPosition &&
+			thatSection.offsetTop + thatSection.offsetHeight > scrollPosition
+		) {
+			document.querySelector('.nav_link_container li a').parentElement.classList.remove('active_section');
+			currLink.parentElement.classList.add('active_section');
 		} else {
-			innerLI[b].classList.remove('active_section');
+			currLink.parentElement.classList.remove('active_section');
 		}
-	});
+	}
 }
