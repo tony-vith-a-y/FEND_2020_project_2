@@ -40,18 +40,18 @@ window.addEventListener('scroll', function() {
 // based on the tutorial from https://www.youtube.com/watch?v=gphMli74Chk
 function ifPageIsScrolling() {
 	if (window.pageYOffset > 1100) {
+		scrollToTopButton.style.bottom = '90px';
 		if (!scrollToTopButton.classList.contains('btn_enter')) {
 			scrollToTopButton.classList.remove('btn_exit');
 			scrollToTopButton.classList.add('btn_enter');
 		}
-		scrollToTopButton.style.display = 'block';
 	} else {
 		if (scrollToTopButton.classList.contains('btn_enter')) {
 			scrollToTopButton.classList.remove('btn_enter');
 			scrollToTopButton.classList.add('btn_exit');
 		}
 		setTimeout(function() {
-			scrollToTopButton.style.display = 'none';
+			scrollToTopButton.style.bottom = '-55px';
 		}, 400);
 	}
 }
@@ -89,12 +89,9 @@ function showActive() {
 	for (let i = 0; i < navLinks.length; i++) {
 		let currLink = navLinks[i];
 		let hrefValue = currLink.getAttribute('href');
-		let thatSection = document.querySelector(hrefValue);
-		if (
-			thatSection.offsetTop <= scrollPosition &&
-			thatSection.offsetTop + thatSection.offsetHeight > scrollPosition
-		) {
-			document.querySelector('.nav_link_container li a').parentElement.classList.remove('active_section');
+		let theSection = document.querySelector(hrefValue);
+		if (theSection.offsetTop <= scrollPosition && theSection.offsetTop + theSection.offsetHeight > scrollPosition) {
+			document.querySelector('.nav_link_container a').parentElement.classList.remove('active_section');
 			currLink.parentElement.classList.add('active_section');
 		} else {
 			currLink.parentElement.classList.remove('active_section');
