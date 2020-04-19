@@ -28,7 +28,7 @@ navListContainer.addEventListener('click', (e) => {
 // Sets the active nav link using the IntersectionObserver
 const options = {
 	root: null, // it's the viewport
-	threshold: 0.58,
+	threshold: 0.59,
 	rootMargin: '0px'
 };
 
