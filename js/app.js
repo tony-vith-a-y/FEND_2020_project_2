@@ -35,7 +35,7 @@ const options = {
 const callback = (entries) => {
 	entries.forEach((entry) => {
 		const eachNavItem = document.querySelector(`[data-link='${entry.target.id}']`);
-		if (entry && entry.isIntersecting) {
+		if (entry.isIntersecting) {
 			eachNavItem.classList.add('navbar__active');
 		} else {
 			if (eachNavItem.classList.contains('navbar__active')) {
