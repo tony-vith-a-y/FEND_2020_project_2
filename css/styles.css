@@ -122,6 +122,39 @@ section {
 	border-radius: 50px;
 }
 
+/* Scroll To Top Button  */
+.btn__enter {
+	animation-duration: 0.6s;
+	animation-fill-mode: both;
+	animation-name: btn_entering;
+}
+
+@keyframes btn_entering {
+	from {
+		opacity: 0;
+		transform: translateY(190%);
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.btn__exit {
+	animation-duration: 0.4s;
+	animation-fill-mode: both;
+	animation-name: btn_exiting;
+}
+
+@keyframes btn_exiting {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		transform: translateY(200%);
+	}
+}
+
 /* Header Styles */
 .page__header {
 	background: #fff;
@@ -224,32 +257,4 @@ section:nth-of-type(3n + 1) .landing__container::after {
 	border-radius: 50%;
 	opacity: 0;
 	transition: ease 0.5s all;
-}
-
-/* ---- Theme State Rules ---- */
-/* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-section.your-active-class {
-	background: rgb(0, 0, 0);
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-section.your-active-class .landing__container::before {
-	opacity: 1;
-	animation: rotate 4s linear 0s infinite forwards;
-}
-
-section.your-active-class .landing__container::after {
-	opacity: 1;
-	animation: rotate 5s linear 0s infinite forwards reverse;
-}
-
-/* Section Active Styles Keyframe Animations */
-@keyframes rotate {
-	from {
-		transform: rotate(0deg) translate(-1em) rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg) translate(-1em) rotate(-360deg);
-	}
 }

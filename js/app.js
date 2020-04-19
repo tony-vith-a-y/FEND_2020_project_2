@@ -36,10 +36,10 @@ const callback = (entries) => {
 	entries.forEach((entry) => {
 		const eachNavItem = document.querySelector(`[data-link='${entry.target.id}']`);
 		if (entry && entry.isIntersecting) {
-			eachNavItem.classList.add('active');
+			eachNavItem.classList.add('navbar__active');
 		} else {
-			if (eachNavItem.classList.contains('active')) {
-				eachNavItem.classList.remove('active');
+			if (eachNavItem.classList.contains('navbar__active')) {
+				eachNavItem.classList.remove('navbar__active');
 			}
 		}
 	});
@@ -48,4 +48,34 @@ const callback = (entries) => {
 const observer = new IntersectionObserver(callback, options);
 sections.forEach((section) => {
 	observer.observe(document.getElementById(section.id));
+});
+
+// Show and Hide the Scroll To Top button
+function ifPageIsScrolling() {
+	if (window.pageYOffset > 800) {
+		scrollToTopButton.style.bottom = '70px';
+		if (!scrollToTopButton.classList.contains('btn__enter')) {
+			scrollToTopButton.classList.remove('btn__exit');
+			scrollToTopButton.classList.add('btn__enter');
+		}
+	} else {
+		if (scrollToTopButton.classList.contains('btn__enter')) {
+			scrollToTopButton.classList.remove('btn__enter');
+			scrollToTopButton.classList.add('btn__exit');
+		}
+		setTimeout(function() {
+			scrollToTopButton.style.bottom = '-55px';
+		}, 400);
+	}
+}
+
+window.addEventListener('scroll', ifPageIsScrolling);
+
+// scroll to the beginning when Scroll To Top Button is pressed
+scrollToTopButton.addEventListener('click', function() {
+	window.scrollTo({
+		top: 0,
+		left: 0,
+		behavior: 'smooth'
+	});
 });
