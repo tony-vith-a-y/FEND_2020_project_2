@@ -171,8 +171,9 @@ section {
 	color: #fff;
 }
 
-.page__footer p {
-	color: #fff;
+.page__footer p img {
+	height: 50px;
+	width: 50px;
 }
 
 /* ---- Theme Rules ---- */
