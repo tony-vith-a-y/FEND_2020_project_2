@@ -4,235 +4,99 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Web Solutions</title>
-	<link rel="stylesheet" href="css/styles.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Manipulating the DOM</title>
+	<!-- Load Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+	<!-- Load Styles -->
+	<link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-	<nav id="navbar">
-	</nav>
-	<main class="outer_container">
-		<!-- Arrow icon is from Google Material Icons -->
-		<button id="scroll_to_top_btn">
-			<i class="material-icons">arrow_upward</i>
-		</button>
-		<section id="contact_us" class="section_details">
-			<ul class="inner_container">
-				<li id="company_logo"></li>
-				<li id="company_name">Web Solutions</li>
-				<li id="company_slogan">Online presence is cruitial for a business so lets make yours the best it can be</li>
-				<li id="contact_section">
-					<figure class="contact_section_image">
-						<img src="https://trueweblogic.com/images/home-webdesign.png" alt="LandingPage_Image">
-						<figcaption class="image_caption">Image Source: see img src</figcaption>
-					</figure>
-					<form id="contact_section_form">
-						<h2>Contact Us</h2>
-						<input type="text" id="Fname" name="firstName" placeholder="Jane">
-						<label for="Fname">First Name</label>
-						<input type="text" id="Lname" name="lastName" placeholder="Doe">
-						<label for="Lname">Last Name</label>
-						<input type="text" id="companyName" name="lastName" placeholder="Company Name">
-						<label for="companyName">Company</label>
-						<input type="text" id="Email" name="e-mail"
-							pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-							placeholder="example@gmail.com" required>
-						<label for="Email">E-mail</label>
-						<input type="tel" id="phone" name="phone" placeholder="123-435-6784" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-							required>
-						<label for="phone">Phone number</label>
-						<input type="button" value="Submit">
-					</form>
-				</li>
-			</ul>
-		</section>
-		<section id="services" class="section_details">
-			<div class="inner_container services_container">
-				<ul class="services_cards text_color_red">
-					<li>
-						<figure>
-							<img class="services_cards_image" src="https://moversdev.com/wp-content/uploads/2019/04/web_design.png">
-							<figcaption class="image_caption">Image Source: see img src</figcaption>
-						</figure>
-					</li>
-					<li class="services_cards_title">Design</li>
-					<li class="card_description">Lorem ipsum dolor sit amet, amet consectetur adipiscing elit, sed do eiusmod
-						ipsum tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-						ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-				</ul>
-				<ul class="services_cards text_color_yellow">
-					<li>
-						<figure>
-							<img class="services_cards_image"
-								src="https://www.codetribesolutions.com/wp-content/uploads/2019/06/web.png">
-							<figcaption class="image_caption">Image Source: see img src</figcaption>
-						</figure>
-					</li>
-					<li class="services_cards_title">Develop</li>
-					<li class="card_description">Lorem ipsum dolor sit amet, amet consectetur adipiscing elit, sed do eiusmod
-						ipsum tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-						ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-				</ul>
-				<ul class="services_cards text_color_green">
-					<li>
-						<figure class="decrease_margin_top">
-							<img class="services_cards_image"
-								src="https://www.bnecreative.com/wp-content/uploads/2019/07/illus-webdesign-2.png">
-							<figcaption class="image_caption">Image Source: see img src</figcaption>
-						</figure>
-					</li>
-					<li class="services_cards_title">Deploy</li>
-					<li class="card_description">Lorem ipsum dolor sit amet, amet consectetur adipiscing elit, sed do eiusmod
-						ipsum tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-						ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-				</ul>
-				<ul class="services_cards text_color_blue">
-					<li>
-						<figure>
-							<img class="services_cards_image"
-								src="https://nativeattention.com/wp-content/uploads/2019/09/digital-marketing-vector-min-1024x659.png">
-							<figcaption class="image_caption">Image Source: see img src</figcaption>
-						</figure>
-					</li>
-					<li class="services_cards_title">Maintain</li>
-					<li class="card_description">Lorem ipsum dolor sit amet, amet consectetur adipiscing elit, sed do eiusmod
-						ipsum tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-						ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-				</ul>
+	<!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+	<header class="page__header">
+		<nav class="navbar__menu">
+			<!-- Navigation starts as empty UL that will be populated with JS -->
+			<ul id="navbar__list__container"></ul>
+		</nav>
+	</header>
+	<main>
+		<header class="main__hero">
+			<h1>Landing Page </h1>
+		</header>
+		<!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+		<section id="section1" data-nav="Section 1" class="">
+			<div class="landing__container">
+				<h2>Section 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+					dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
+					imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+					bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+					elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
+					nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+					semper in tellus. Sed congue et odio sed euismod.</p>
+
+				<p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+					luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+					porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
 			</div>
 		</section>
-		<section id="pricing" class="section_details">
-			<div class="inner_container price_cards">
-				<ul>
-					<li>
-						<h2>Tier 1</h2>
-					</li>
-					<li>
-						<ul>
-							<li class="price_product text_color_red">Design</li>
-						</ul>
-					</li>
-					<li class="price_icon">$</li>
-				</ul>
-				<ul>
-					<li>
-						<h2>Tier 2</h2>
-					</li>
-					<li>
-						<ul>
-							<li class="price_product text_color_red">Design</li>
-							<li class="price_product text_color_yellow">Develop</li>
-							<li class="price_product text_color_green">Deploy</li>
-						</ul>
-					</li>
-					<li class="price_icon">$$$</li>
-				</ul>
-				<ul>
-					<li>
-						<h2>Tier 3</h2>
-					</li>
-					<li>
-						<ul>
-							<li class="price_product text_color_red">Design</li>
-							<li class="price_product text_color_yellow">Develop</li>
-							<li class="price_product text_color_green">Deploy</li>
-							<li class="price_product text_color_blue">Maintain</li>
-						</ul>
-					</li>
-					<li class="price_icon">$$$$</li>
-				</ul>
+		<section id="section2" data-nav="Section 2" class="">
+			<div class="landing__container">
+				<h2>Section 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+					dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
+					imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+					bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+					elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
+					nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+					semper in tellus. Sed congue et odio sed euismod.</p>
+
+				<p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+					luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+					porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
 			</div>
 		</section>
-		<section id="reviews" class="section_details">
-			<div class="inner_container reviews_container">
-				<ul class="reviews_card">
-					<li class="quotes open_quote"></li>
-					<li class="review_text">
-						<h3>Company name</h3>
-						<h5>author</h5>
-						<h5>website</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.</p>
-					</li>
-					<li class="review_profile_icon"><img class="review_profile_image"
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBzfbO0R9U3IFzm7VGk8U-xicsFpygJqsao95QMaFYcHWZfmDS">
-					</li>
-					<li class="quotes close_quote"></li>
-				</ul>
-				<ul class="reviews_card">
-					<li class="quotes open_quote"></li>
-					<li class="review_text">
-						<h3>Company name</h3>
-						<h5>author</h5>
-						<h5>website</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.</p>
-					</li>
-					<li class="review_profile_icon"><img class="review_profile_image"
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBzfbO0R9U3IFzm7VGk8U-xicsFpygJqsao95QMaFYcHWZfmDS">
-					</li>
-					<li class="quotes close_quote"></li>
-				</ul>
-				<ul class="reviews_card">
-					<li class="quotes open_quote"></li>
-					<li class="review_text">
-						<h3>Company name</h3>
-						<h5>author</h5>
-						<h5>website</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.</p>
-					</li>
-					<li class="review_profile_icon"><img class="review_profile_image"
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBzfbO0R9U3IFzm7VGk8U-xicsFpygJqsao95QMaFYcHWZfmDS">
-					</li>
-					<li class="quotes close_quote"></li>
-				</ul>
-				<ul class="reviews_card">
-					<li class="quotes open_quote"></li>
-					<li class="review_text">
-						<h3>Company name</h3>
-						<h5>author</h5>
-						<h5>website</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.</p>
-					</li>
-					<li class="review_profile_icon"><img class="review_profile_image"
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBzfbO0R9U3IFzm7VGk8U-xicsFpygJqsao95QMaFYcHWZfmDS">
-					</li>
-					<li class="quotes close_quote"></li>
-				</ul>
-				<ul class="reviews_card">
-					<li class="quotes open_quote"></li>
-					<li class="review_text">
-						<h3>Company name</h3>
-						<h5>author</h5>
-						<h5>website</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.</p>
-					</li>
-					<li class="review_profile_icon"><img class="review_profile_image"
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBzfbO0R9U3IFzm7VGk8U-xicsFpygJqsao95QMaFYcHWZfmDS">
-					</li>
-					<li class="quotes close_quote"></li>
-				</ul>
-				<ul class="reviews_card">
-					<li class="quotes open_quote"></li>
-					<li class="review_text">
-						<h3>Company name</h3>
-						<h5>author</h5>
-						<h5>website</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. </p>
-					</li>
-					<li class="review_profile_icon"><img class="review_profile_image"
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBzfbO0R9U3IFzm7VGk8U-xicsFpygJqsao95QMaFYcHWZfmDS">
-					</li>
-					<li class="quotes close_quote"></li>
-				</ul>
+		<section id="section3" data-nav="Section 3" class="">
+			<div class="landing__container">
+				<h2>Section 3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+					dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
+					imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+					bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+					elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
+					nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+					semper in tellus. Sed congue et odio sed euismod.</p>
+
+				<p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+					luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+					porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+			</div>
+		</section>
+		<section id="section4" data-nav="Section 4" class="">
+			<div class="landing__container">
+				<h2>Section 4</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+					dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
+					imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+					bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+					elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
+					nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+					semper in tellus. Sed congue et odio sed euismod.</p>
+
+				<p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+					luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+					porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
 			</div>
 		</section>
 	</main>
+	<footer class="page__footer">
+		<p>&copy Udacity</p>
+	</footer>
 	<script src="js/app.js"></script>
 </body>
 
