@@ -1,5 +1,6 @@
 const sections = document.querySelectorAll('section');
 const navListContainer = document.getElementById('navbar__list__container');
+const scrollToTopButton = document.querySelector('.scroll__to__top__btn');
 
 // Dynamically create navbar's links
 sections.forEach((section) => {
@@ -22,4 +23,29 @@ navListContainer.addEventListener('click', (e) => {
 		behavior: 'smooth',
 		block: 'start'
 	});
+});
+
+// Sets the active nav link using the IntersectionObserver
+const options = {
+	root: null, // it's the viewport
+	threshold: 0.58,
+	rootMargin: '0px'
+};
+
+const callback = (entries) => {
+	entries.forEach((entry) => {
+		const eachNavItem = document.querySelector(`[data-link='${entry.target.id}']`);
+		if (entry && entry.isIntersecting) {
+			eachNavItem.classList.add('active');
+		} else {
+			if (eachNavItem.classList.contains('active')) {
+				eachNavItem.classList.remove('active');
+			}
+		}
+	});
+};
+
+const observer = new IntersectionObserver(callback, options);
+sections.forEach((section) => {
+	observer.observe(document.getElementById(section.id));
 });
